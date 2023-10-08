@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign-up</title>
+    <style>
+        html {
+            font-size: 25px;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond';
+            font-style: normal;
+            background-color: aliceblue;
+        }
+
+        p {
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            margin-top: -1%;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .image {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: -5%;
+        }
+
+        img {
+            height: 25vh;
+            width: 68vw;
+            border-radius: 2%;
+            margin-top: 7%;
+        }
+
+        .container {
+            height: 58vh;
+            min-height: 60vh;
+            overflow: auto;
+            width: 100%;
+            max-width: 65vw;
+            padding: 2%;
+            box-shadow: 0px 0px 20px #00000010;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 1%;
+            font-size: 1rem;
+
+
+        }
+
+        .form-group {
+            height: -45%;
+            width: 26vw;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 48vw;
+            padding: 5px;
+            border: 0.3125em solid rgba(128, 128, 128, 0.199);
+            font-size: 1rem;
+
+
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 2%;
+            border-radius: 8px;
+            font-family: Courier;
+            font-size: 1rem;
+            color: rgb(27, 166, 247);
+            cursor: pointer;
+            margin-top: 1%;
+            transition: 0.3s ease background-color;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(214, 226, 236);
+        }
+
+        #status {
+            width: 15%;
+            max-width: 150%;
+            text-align: center;
+            padding: 5px;
+            margin: 0 auto;
+            border-radius: 8px;
+            margin-top: 1%;
+            font-size: 1rem;
+        }
+
+        #status.success {
+            background-color: rgb(211, 250, 153);
+            animation: status 4s ease forwards;
+        }
+
+        #status.error {
+            background-color: rgb(250, 129, 92);
+            color: white;
+            animation: status 4s ease forwards;
+        }
+
+        @keyframes status {
+            0% {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            90% {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            100% {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <span class="image">
+            <img src="image1.jpg" alt="This is a image" class="center">
+        </span>
+        <div class="container containers">
+            <form action="" method="post">
+                <p>IMPORTANT NOTE: Required Fileds are followed by *
+                    <br>
+                    &nbsp Create new user || Login to existing account
+                </p>
+            </br>
+                <div class="form-group">
+                    <a href="Sign.html">Add New User</a>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="text" id="email" name="email" value="" placeholder="Type Your Email" required>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="pass">
+                </div>
+                <br>
+
+                <button type="submit">Save</button>
+
+            </form>
+        </div>
+        <div id="status" class="success">Success</div>
+    </section>
+</body>
+
+</html>
